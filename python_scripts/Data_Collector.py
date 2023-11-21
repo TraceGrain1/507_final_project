@@ -4,7 +4,6 @@
 import json
 import requests
 from api_key import api_key
-import pandas as pd
 import os
 
 
