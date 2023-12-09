@@ -18,7 +18,7 @@ daily_endpoint = "histoday"
 blockchain_endpoint = "blockchain/histo/day"
 
 # Cryptocurrencies to query
-crypto = ["BTC", "ETH", "LTC"]
+crypto = ["BTC", "ETH", "LTC", "USDC", "USDT", "GUSD", "MANA", "POLY"]
 
 # Conversion currency
 fiat = "USD"
