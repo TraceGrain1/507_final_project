@@ -3,7 +3,7 @@
 ## Project Description
 
 This is a cryptocurrency analysis application that recommends a few different cryptocurrencies based on a few questions
-that the user will answer from a command linee prompt. Once a user selects a recommended cryptocurrency, the application
+that the user will answer from a command line prompt. Once a user selects a recommended cryptocurrency, the application
 will give you options to plot historical data for price or network data for the selected cryptocurrency.
 
 ## Requirements
