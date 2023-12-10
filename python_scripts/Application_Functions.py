@@ -64,7 +64,7 @@ def financialAnalysis(ticker):
             while True:
                 print("----------------------------------------------------------")
                 print("PRICE PERIOD MENU")
-                print("Type \"Exit\" to go back to the MAIN MENU.")
+                print("Type \"E\" to go back to the MAIN MENU.")
                 print("Analyzing price data for " + ticker + "...")
                 prices = loadData(ticker, plotType)
                 period = input("What type of price data would you like to analyze? (Daily, Weekly, Monthly)")
@@ -72,7 +72,7 @@ def financialAnalysis(ticker):
                     while True:
                         print("----------------------------------------------------------")
                         print("PRICE OR RETURN MENU")
-                        print("Type \"Exit\" to go back to the PRICE PERIOD MENU.")
+                        print("Type \"E\" to go back to the PRICE PERIOD MENU.")
                         print("Analyzing daily price data for " + ticker)
                         newPrices = changePeriod(period, prices)
                         priceOrReturn = input("Would you like to analyze price or return data? (Price or Return) ")
@@ -86,7 +86,7 @@ def financialAnalysis(ticker):
                             newPrices["return"] = newPrices["close"].pct_change()
                             newPrices = newPrices.dropna()
                             plotReturnSeries(newPrices, ticker)
-                        elif priceOrReturn.lower() == "exit":
+                        elif priceOrReturn.lower() == "e":
                             break
                         else:
                             print("Invalid input. Please enter 'Price' or 'Return'.")
@@ -94,7 +94,7 @@ def financialAnalysis(ticker):
                     while True:
                         print("----------------------------------------------------------")
                         print("PRICE OR RETURN MENU")
-                        print("Type \"Exit\" to go back to the PERIOD MENU.")
+                        print("Type \"E\" to go back to the PERIOD MENU.")
                         print("Analyzing daily price data for " + ticker)
                         newPrices = changePeriod(period, prices)
                         priceOrReturn = input("Would you like to analyze price or return data? (Price or Return) ")
@@ -108,7 +108,7 @@ def financialAnalysis(ticker):
                             newPrices["return"] = newPrices["close"].pct_change()
                             newPrices = newPrices.dropna()
                             plotReturnSeries(newPrices, ticker)
-                        elif priceOrReturn.lower() == "exit":
+                        elif priceOrReturn.lower() == "e":
                             break
                         else:
                             print("Invalid input. Please enter 'Price' or 'Return'.")
@@ -116,7 +116,7 @@ def financialAnalysis(ticker):
                     while True:
                         print("----------------------------------------------------------")
                         print("PRICE OR RETURN MENU")
-                        print("Type \"Exit\" to go back to the PERIOD MENU.")
+                        print("Type \"E\" to go back to the PERIOD MENU.")
                         print("Analyzing daily price data for " + ticker)
                         newPrices = changePeriod(period, prices)
                         priceOrReturn = input("Would you like to analyze price or return data? (Price or Return) ")
@@ -130,19 +130,19 @@ def financialAnalysis(ticker):
                             newPrices["return"] = newPrices["close"].pct_change()
                             newPrices = newPrices.dropna()
                             plotReturnSeries(newPrices, ticker)
-                        elif priceOrReturn.lower() == "exit":
+                        elif priceOrReturn.lower() == "e":
                             break
                         else:
                             print("Invalid input. Please enter 'Price' or 'Return'.")
-                elif period.lower() == "exit":
+                elif period.lower() == "e":
                     break
                 else:
-                    print("Invalid input. Please enter 'Daily', 'Weekly', 'Monthly' or 'Exit'.")
+                    print("Invalid input. Please enter 'Daily', 'Weekly', 'Monthly' or 'E'.")
         elif plotType.lower() == "network":
             while True:
                 print("----------------------------------------------------------")
                 print("NETWORK PERIOD MENU")
-                print("Type \"Exit\" to go back to the MAIN MENU.")
+                print("Type \"E\" to go back to the MAIN MENU.")
                 network = loadData(ticker, plotType)
                 period = input("What type of network data would you like to analyze? (Daily, Weekly, Monthly)")
                 if period.lower() == "daily":
@@ -151,7 +151,7 @@ def financialAnalysis(ticker):
                         validInputs = newNetwork.columns.tolist()
                         print("----------------------------------------------------------")
                         print("NETWORK PLOTS MENU")
-                        print("Type \"Exit\" to go back to the NETWORK PERIOD MENU.")
+                        print("Type \"E\" to go back to the NETWORK PERIOD MENU.")
                         print("Analyzing daily network data for " + ticker)
                         print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
                         print("Select a number corresponding to the statistic you would like to analyze:")
@@ -166,7 +166,7 @@ def financialAnalysis(ticker):
                         except ValueError:
                             pass
                         try:
-                            if numberSelected.lower() == "exit":
+                            if numberSelected.lower() == "e":
                                 break
                         except ValueError:
                             pass
@@ -176,7 +176,7 @@ def financialAnalysis(ticker):
                         validInputs = newNetwork.columns.tolist()
                         print("----------------------------------------------------------")
                         print("NETWORK PLOTS MENU")
-                        print("Type \"Exit\" to go back to the NETWORK PERIOD MENU.")
+                        print("Type \"E\" to go back to the NETWORK PERIOD MENU.")
                         print("Analyzing daily network data for " + ticker)
                         print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
                         print("Select a number corresponding to the statistic you would like to analyze:")
@@ -191,7 +191,7 @@ def financialAnalysis(ticker):
                         except ValueError:
                             pass
                         try:
-                            if numberSelected.lower() == "exit":
+                            if numberSelected.lower() == "e":
                                 break
                         except ValueError:
                             pass
@@ -201,7 +201,7 @@ def financialAnalysis(ticker):
                         validInputs = newNetwork.columns.tolist()
                         print("----------------------------------------------------------")
                         print("NETWORK PLOTS MENU")
-                        print("Type \"Exit\" to go back to the NETWORK PERIOD MENU.")
+                        print("Type \"E\" to go back to the NETWORK PERIOD MENU.")
                         print("Analyzing daily network data for " + ticker)
                         print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
                         print("Select a number corresponding to the statistic you would like to analyze:")
@@ -216,14 +216,14 @@ def financialAnalysis(ticker):
                         except ValueError:
                             pass
                         try:
-                            if numberSelected.lower() == "exit":
+                            if numberSelected.lower() == "e":
                                 break
                         except ValueError:
                             pass
-                elif period.lower() == "exit":
+                elif period.lower() == "e":
                     break
                 else:
-                    print("Invalid input. Please enter 'Daily', 'Weekly', 'Monthly' or 'Exit'.")
+                    print("Invalid input. Please enter 'Daily', 'Weekly', 'Monthly' or 'E'.")
         elif plotType.lower() == "quit":
             while on2 == True:
                 tryAgain = input("Would you like to analyze another cryptocurrency? (Yes or No) ")
