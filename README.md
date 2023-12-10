@@ -19,9 +19,9 @@ In order to run this application, you will need to obtain an API key from [Crypt
 
 ## Data Description
 ### Data Stucture
-The data for types of cryptocurrencies to recommend along with questions to ascertain what cryptocurrency to recommend are stored in dictionaries inside the cryptocurrency.py file and are later used to create a tree structure to recommend cryptocurrencies based on user input through a command line prompt tool.
+The data for types of cryptocurrencies to recommend along with questions to ascertain what cryptocurrency to recommend are stored in dictionaries inside the cryptocurrency.py file. This data is used to create a tree structure to recommend cryptocurrencies based on user input through a command line prompt tool.
 
-The `buildTree()` function in the Application_Function.py file is used to build the tree structure from the dictionaries in the cryptocurrency.py file.
+The `buildTree()` function in the Application_Function.py file is used to build the tree structure from the dictionaries in the cryptocurrency.py file. `buildTree()` is called within crypto_tree_build.py and generates a json file called 'crypto_tree.json'. This file is later loaded in the main application script ('crypto_application.py') and used for the recommendation application.
 
 The data for historical price and network data are obtained from the CryptoCompare API and stored inside json files in the json_files folder.
 
