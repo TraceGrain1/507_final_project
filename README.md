@@ -79,4 +79,4 @@ To run this application please follow the steps below:
 3. Update the api_key variable in the api_key.py file with your API key.
 4. Run the crypto_application.py
 5. Within the command line prompt, answer the questions to get a recommended cryptocurrency.
-6. Once a cryptocurrency is selected, you will be given options to plot historical price or network data for the selected cryptocurrency.
+6. Once a cryptocurrency is selected, you will be given options to plot historical price or network data for the selected cryptocurrency. (Note - More specific instructions will be given in the command line prompt.)
