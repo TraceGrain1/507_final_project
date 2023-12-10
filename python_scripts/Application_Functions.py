@@ -6,6 +6,13 @@ from cryptocurrency import crypto_dict, questions
 #### PLAY FUNCTION ####
 def play(tree):
     """
+    Function to be able to enter the recommendation system
+
+    play function will take in a tree and ask the user questions to determine the best cryptocurrency to analyze
+
+    parameters: tree
+
+    returns: the new tree
     """
     if isAnswer(tree):
         return playAnswer(tree)
@@ -36,6 +43,8 @@ def isAnswer(tree):
 #### PLAY ANSWER FUNCTION ####
 def playAnswer(tree):
     """
+    Helper function to return the answer of the tree
+
     parameters: tree
 
     returns: the new tree
@@ -52,6 +61,29 @@ def playAnswer(tree):
 #### FINANCIAL ANALYSIS FUNCTION ####
 def financialAnalysis(ticker):
     """
+    Function to analyze the financial data of a cryptocurrency
+
+    financialAnalysis function will take in a ticker symbol and ask the user what type of analysis they would like to perform
+
+    There is one main menu and two submenus for price and network analysis
+
+    The main menu will ask the user if they would like to analyze price or network data
+
+    The price submenu will ask the user if they would like to analyze daily, weekly, or monthly price data
+
+    Within the daily, weekly, and monthly price submenus, the user will be asked if they would like to analyze price or return data
+
+    when the user selects price or return data, the function will plot the price or return series for the selected period
+
+    The network submenu will ask the user if they would like to analyze daily, weekly, or monthly network data
+
+    Within the daily, weekly, and monthly network submenus, the user will be asked to select a statistic to analyze
+
+    when the user selects a statistic, the function will plot the network statistic series for the selected period
+
+    parameters: ticker
+
+    returns: None
     """
     on = True
     on2 = True
@@ -297,6 +329,11 @@ def plotReturnSeries(data, ticker):
 #### PLOT NETWORK STATS SERIES FUNCTION ####
 def plotNetworkStatSeries(data, ticker, statistic):
     """
+    This function will plot the network statistic series for the selected period
+
+    parameters: data, ticker, statistic
+
+    returns: None
     """
     fig = px.line(data, x=data.index, y=statistic)
     fig.update_layout(title=statistic + " : " + ticker, xaxis_title="Date", yaxis_title=statistic)
@@ -304,6 +341,15 @@ def plotNetworkStatSeries(data, ticker, statistic):
 
 #### TREE DATA STRUCTOR CONTRUCTOR ####
 def buildTree(crypto_dict, questions):
+    """
+    Function to build the tree data structure
+
+    buildTree function will take in a dictionary of cryptocurrencies and a dictionary of questions to build the tree data structure
+
+    parameters: crypto_dict, questions
+
+    returns: the tree data structure
+    """
     # create the first node of the tree with the first question
     mainNode = (questions["large_cap"])
 

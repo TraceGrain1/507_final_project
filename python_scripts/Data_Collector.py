@@ -5,6 +5,7 @@ import json
 import requests
 from api_key import api_key
 import os
+from cryptocurrency import crypto_dict
 
 
 # Define base URL
