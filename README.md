@@ -10,7 +10,6 @@ will give you options to plot historical data for price or network data for the 
 
 * Pandas
 * Requests
-* Json
 * Plotly
 
 ## API KEY
