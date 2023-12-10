@@ -1,6 +1,7 @@
 #### Application Functions ####
 import pandas as pd
 import plotly.express as px
+from cryptocurrency import crypto_dict, questions
 
 #### PLAY FUNCTION ####
 def play(tree):
@@ -53,6 +54,7 @@ def financialAnalysis(ticker):
     """
     """
     on = True
+    on2 = True
     while on == True:
         print("----------------------------------------------------------")
         print("MAIN MENU")
@@ -223,15 +225,16 @@ def financialAnalysis(ticker):
                 else:
                     print("Invalid input. Please enter 'Daily', 'Weekly', 'Monthly' or 'Exit'.")
         elif plotType.lower() == "quit":
-            while True:
+            while on2 == True:
                 tryAgain = input("Would you like to analyze another cryptocurrency? (Yes or No) ")
                 if(tryAgain.lower() == "yes"):
                     print("\n")
                     print("----------------------------------------------------------")
-                    play(cryptoTree)
+                    play(buildTree(crypto_dict, questions))
                 elif(tryAgain.lower() == "no"):
                     print("Exiting application.")
                     on = False
+                    on2 = False
                     break
                 else:
                     print("Invalid input. Please enter 'Yes' or 'No'.")
